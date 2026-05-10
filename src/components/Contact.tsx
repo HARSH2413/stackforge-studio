@@ -24,16 +24,30 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", whatsapp: "", requirement: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const res = await fetch("/api/chatbot-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          whatsapp: formData.whatsapp,
+          projectDescription: formData.requirement,
+          conversationSource: "Homepage Contact Section",
+          timestamp: new Date().toISOString(),
+        }),
+      });
+      if (!res.ok) throw new Error("Failed to send");
       setFormData({ name: "", email: "", whatsapp: "", requirement: "" });
       toast.success("Message sent successfully! We'll get back to you within 24 hours.");
-    }, 1500);
+    } catch {
+      toast.error("Something went wrong. Please try again or email us at hello@noryant.com");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -56,9 +70,9 @@ export default function Contact() {
 
             <div className="space-y-4">
               {[
-                { icon: Mail, label: "Email Us", value: "hello@stackforge.com", href: "mailto:hello@stackforge.com" },
+                { icon: Mail, label: "Email Us", value: "hello@noryant.com", href: "mailto:hello@noryant.com" },
                 { icon: Phone, label: "WhatsApp", value: "Connect on WhatsApp", href: "https://wa.me/919999999999" },
-                { icon: Linkedin, label: "LinkedIn", value: "Stackforge Studio", href: "https://linkedin.com/company/stackforge" },
+                { icon: Linkedin, label: "LinkedIn", value: "Noryant", href: "https://www.linkedin.com/company/noryant" },
               ].map((contact) => {
                 const Icon = contact.icon;
                 return (

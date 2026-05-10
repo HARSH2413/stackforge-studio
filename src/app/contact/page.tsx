@@ -8,7 +8,7 @@ import { Mail, Clock, MessageCircle, CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Stackforge Studio for a free project consultation. Tell us about your business needs and we'll propose a practical, cost-effective solution.",
+    "Get in touch with Noryant for a free project consultation. Tell us about your business needs and we'll propose a practical, cost-effective solution.",
 };
 
 const faqs = [
@@ -48,7 +48,7 @@ export default function ContactPage() {
 
                 <div className="space-y-4 mb-10">
                   {[
-                    { icon: Mail, label: "Email Us", value: "hello@stackforgestudio.in", href: "mailto:hello@stackforgestudio.in" },
+                    { icon: Mail, label: "Email Us", value: "hello@noryant.com", href: "mailto:hello@noryant.com" },
                     { icon: MessageCircle, label: "WhatsApp", value: "Chat with us on WhatsApp", href: "https://wa.me/919999999999" },
                     { icon: Clock, label: "Response Time", value: "Within 24 hours on business days", href: undefined },
                   ].map((contact) => {

@@ -41,7 +41,7 @@ export async function POST(req: Request) {
       });
 
       const mailOptions = {
-        from: `"Stackforge Bot" <${SMTP_USER}>`,
+        from: `"Noryant Bot" <${SMTP_USER}>`,
         to: NOTIFICATION_EMAIL,
         subject: `New Lead: ${data.name || "Unknown"} - ${data.service || "Inquiry"}`,
         text: `

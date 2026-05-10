@@ -3,19 +3,19 @@ import { Toaster } from "sonner";
 import "./globals.css";
 import Chatbot from "@/components/Chatbot";
 
-const siteUrl = "https://stackforge.studio";
-const siteName = "Stackforge Studio";
+const siteUrl = "https://noryant.com";
+const siteName = "Noryant";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Stackforge Studio | Affordable Custom Software, Mobile Apps & AI Solutions",
-    template: "%s | Stackforge Studio",
+    default: "Noryant | Affordable Custom Software, Mobile Apps & AI Solutions",
+    template: "%s | Noryant",
   },
 
   description:
-    "Stackforge Studio is a software development studio building affordable, scalable, and low-maintenance digital solutions for small businesses, startups, and growing enterprises. Custom websites, Flutter apps, AI automation & more.",
+    "Noryant is a growing software development studio building affordable, scalable, and low-maintenance digital solutions for businesses ready to grow. Custom websites, Flutter apps, AI automation & more.",
 
   keywords: [
     "software development studio",
@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     "cost-effective software",
     "small business software",
     "inventory management app",
-    "Stackforge Studio",
+    "Noryant",
   ],
 
-  authors: [{ name: "Stackforge Studio", url: siteUrl }],
-  creator: "Stackforge Studio",
-  publisher: "Stackforge Studio",
+  authors: [{ name: "Noryant", url: siteUrl }],
+  creator: "Noryant",
+  publisher: "Noryant",
 
   alternates: {
     canonical: siteUrl,
@@ -46,26 +46,26 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName,
-    title: "Stackforge Studio | Smart Digital Products Built for Business Growth",
+    title: "Noryant | Smart Digital Products Built for Business Growth",
     description:
-      "Cost-effective software solutions tailored for modern businesses. Custom websites, mobile apps, AI automation, and business management systems. Built lean. Built to last.",
+      "Cost-effective software solutions tailored for modern businesses. Custom websites, mobile apps, AI automation, and business management systems. Practical digital solutions for modern businesses.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Stackforge Studio — Affordable Custom Software Development",
+        alt: "Noryant — Affordable Custom Software Development",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Stackforge Studio | Affordable Software Development Studio",
+    title: "Noryant | Affordable Software Development Studio",
     description:
-      "We build affordable, scalable digital solutions for businesses. Custom websites, mobile apps, AI automation & more. Built lean. Built to last.",
+      "We build affordable, scalable digital solutions for businesses. Custom websites, mobile apps, AI automation & more. Practical digital solutions for modern businesses.",
     images: ["/og-image.png"],
-    creator: "@stackforgestudio",
+    creator: "@noryant",
   },
 
   robots: {
@@ -81,8 +81,12 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 
   category: "Technology",

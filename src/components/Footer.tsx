@@ -1,5 +1,6 @@
 "use client";
-import { Code2, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 const serviceLinks = [
   { label: "Website Development", href: "/services/website-development" },
@@ -25,14 +26,24 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-4 xl:col-span-5">
-            <a href="/" className="flex items-center gap-2 group mb-6 w-fit">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 group-hover:bg-slate-800 transition-colors border border-slate-800">
-                <Code2 className="h-4 w-4 text-amber-500" strokeWidth={2.5} />
+            <a href="/" className="flex items-center gap-3.5 group mb-8 w-fit">
+              <div className="relative animate-levitate">
+                <div className="h-14 w-14 rounded-2xl logo-glass-dark shadow-lg shadow-sky-500/5 group-hover:shadow-sky-500/15 transition-all duration-300 overflow-hidden flex items-center justify-center">
+                  <Image
+                    src="/images/noryant-logo.png"
+                    alt="Noryant"
+                    width={200}
+                    height={200}
+                    className="w-[80%] h-[80%] object-contain logo-glow"
+                  />
+                </div>
               </div>
-              <span className="text-lg font-bold font-[var(--font-heading)] tracking-tight text-white">Stackforge Studio</span>
+              <span className="text-[15px] font-bold tracking-[0.28em] text-white/90 font-[var(--font-brand)] uppercase group-hover:text-sky-400 transition-colors duration-300 select-none">
+                NORYANT
+              </span>
             </a>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm mb-6">
-              A growing software development studio building affordable, scalable, and low-maintenance digital solutions for businesses ready to grow.
+              Noryant is a growing software development studio building affordable, scalable, and low-maintenance digital solutions for businesses ready to grow.
             </p>
           </div>
 
@@ -69,10 +80,10 @@ export default function Footer() {
             <h4 className="text-xs font-mono font-semibold text-slate-300 uppercase tracking-[0.15em] mb-6">Connect</h4>
             <ul className="space-y-4">
               {[
-                { label: "hello@stackforgestudio.in", href: "mailto:hello@stackforgestudio.in" },
+                { label: "hello@noryant.com", href: "mailto:hello@noryant.com" },
                 { label: "WhatsApp", href: "https://wa.me/919999999999" },
-                { label: "LinkedIn", href: "https://linkedin.com/company/stackforge" },
-                { label: "GitHub", href: "https://github.com/stackforgestudio" },
+                { label: "LinkedIn", href: "https://www.linkedin.com/company/noryant" },
+                { label: "GitHub", href: "https://github.com/noryant" },
               ].map((c) => (
                 <li key={c.label}>
                   <a href={c.href} target="_blank" rel="noopener noreferrer"
@@ -88,7 +99,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 flex justify-center text-center">
-          <p className="text-xs text-slate-500 font-mono">© 2026 Stackforge Studio. Built Lean. Built to Last.</p>
+          <p className="text-xs text-slate-500 font-mono">© 2026 Noryant. Practical Digital Solutions for Modern Businesses.</p>
         </div>
       </div>
     </footer>

@@ -35,7 +35,7 @@ export default function WhyUs() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto animate-fade-up">
           <span className="text-xs font-mono uppercase tracking-[0.2em] text-amber-600 font-bold mb-4 block">
-            / Why Businesses Work With Stackforge
+            / Why Businesses Work With Noryant
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 mb-6 leading-tight">
             Built for Businesses That Need Practical, Not Overpriced Software

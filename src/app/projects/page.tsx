@@ -8,7 +8,7 @@ import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Projects & Case Studies",
   description:
-    "Explore Stackforge Studio's real client projects — from Car Guru inventory management to AI automation systems. See how we help businesses digitize and scale.",
+    "Explore Noryant's real client projects — from Car Guru inventory management to AI automation systems. See how we help businesses digitize and scale.",
 };
 
 const mainProject = {

@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { Code2, Menu, X, ArrowRight, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 
 const serviceLinks = [
   { label: "Website Development", href: "/services/website-development" },
@@ -62,13 +63,22 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex h-16 items-center justify-between">
 
-          {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 hover:bg-slate-800 transition-colors">
-              <Code2 className="h-4 w-4 text-amber-500" strokeWidth={2.5} />
+          {/* Logo — Anti-Gravity */}
+          <a href="/" className="flex items-center gap-3 group py-1">
+            <div className="relative animate-levitate">
+              <div className="h-10 w-10 rounded-xl logo-glass shadow-sm group-hover:shadow-lg transition-all duration-300 overflow-hidden flex items-center justify-center">
+                <Image
+                  src="/images/noryant-logo.png"
+                  alt="Noryant"
+                  width={200}
+                  height={200}
+                  className="h-[85%] w-[85%] object-contain logo-glow"
+                  priority
+                />
+              </div>
             </div>
-            <span className="text-lg font-bold font-[var(--font-heading)] tracking-tight text-slate-900">
-              Stackforge
+            <span className="text-[13px] font-bold tracking-[0.28em] text-slate-800 font-[var(--font-brand)] uppercase group-hover:text-sky-600 transition-colors duration-300 select-none">
+              NORYANT
             </span>
           </a>
 

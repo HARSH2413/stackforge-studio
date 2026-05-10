@@ -8,7 +8,7 @@ const codeLines = [
   { indent: 1, tokens: [{ text: "deployment", color: "#67E8F9" }, { text: ": ", color: "#94A3B8" }, { text: "'cost-optimized'", color: "#6EE7B7" }, { text: ",", color: "#94A3B8" }] },
   { indent: 1, tokens: [{ text: "support", color: "#67E8F9" }, { text: ": ", color: "#94A3B8" }, { text: "'6 months free'", color: "#6EE7B7" }, { text: ",", color: "#94A3B8" }] },
   { indent: 1, tokens: [{ text: "scalable", color: "#67E8F9" }, { text: ":  ", color: "#94A3B8" }, { text: "true", color: "#FBBF24" }, { text: ",", color: "#94A3B8" }] },
-  { indent: 1, tokens: [{ text: "philosophy", color: "#67E8F9" }, { text: ": ", color: "#94A3B8" }, { text: "'Built lean. Built to last.'", color: "#6EE7B7" }] },
+  { indent: 1, tokens: [{ text: "philosophy", color: "#67E8F9" }, { text: ": ", color: "#94A3B8" }, { text: "'Practical digital solutions.'", color: "#6EE7B7" }] },
   { indent: 0, tokens: [{ text: "};", color: "#E2E8F0" }] },
 ];
 
@@ -88,7 +88,7 @@ export default function Hero() {
                   <span className="w-3.5 h-3.5 rounded-full bg-red-500/80" />
                   <span className="w-3.5 h-3.5 rounded-full bg-amber-500/80" />
                   <span className="w-3.5 h-3.5 rounded-full bg-emerald-500/80" />
-                  <span className="ml-4 text-xs font-mono text-slate-400">stackforge-project.ts</span>
+                  <span className="ml-4 text-xs font-mono text-slate-400">noryant-project.ts</span>
                 </div>
 
                 {/* Code body */}

@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { services } from "@/lib/services-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://stackforge.studio";
+  const baseUrl = "https://noryant.com";
   const now = new Date();
 
   const servicePages = services.map((s) => ({

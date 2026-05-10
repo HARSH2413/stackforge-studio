@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://stackforge.studio/sitemap.xml",
-    host: "https://stackforge.studio",
+    sitemap: "https://noryant.com/sitemap.xml",
+    host: "https://noryant.com",
   };
 }

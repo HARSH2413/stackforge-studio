@@ -7,14 +7,31 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({ name: "", email: "", whatsapp: "", service: "", requirement: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const res = await fetch("/api/chatbot-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          whatsapp: formData.whatsapp,
+          service: formData.service,
+          projectDescription: formData.requirement,
+          conversationSource: "Contact Page Form",
+          timestamp: new Date().toISOString(),
+        }),
+      });
+      if (!res.ok) throw new Error("Failed to send");
       setFormData({ name: "", email: "", whatsapp: "", service: "", requirement: "" });
       toast.success("Message sent! We'll get back to you within 24 hours.");
-    }, 1500);
+    } catch {
+      toast.error("Something went wrong. Please try again or email us at hello@noryant.com");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputClasses = "w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:bg-white transition-all placeholder:text-slate-400";

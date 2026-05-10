@@ -4,13 +4,13 @@ import { Quote, Star, CheckCircle2 } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "The team at Stackforge Studio built our Car Guru inventory management app exactly around our dealership workflow. The application is practical, easy to use, and very affordable to maintain. Communication and support throughout the process were excellent.",
+    quote: "The team at Noryant built our Car Guru inventory management app exactly around our dealership workflow. The application is practical, easy to use, and very affordable to maintain. Communication and support throughout the process were excellent.",
     author: "Car Guru Client",
     role: "Dealership Owner",
     initials: "CG"
   },
   {
-    quote: "We wanted an educational platform that felt interactive and modern rather than a typical static learning app. Stackforge Studio understood the concept clearly and delivered an AI-powered product that makes technical learning much more engaging and accessible for users.",
+    quote: "We wanted an educational platform that felt interactive and modern rather than a typical static learning app. Noryant understood the concept clearly and delivered an AI-powered product that makes technical learning much more engaging and accessible for users.",
     author: "AI Ki Paathshala Team",
     role: "EdTech Product Owner",
     initials: "AP"
@@ -22,7 +22,7 @@ const testimonials = [
     initials: "CP"
   },
   {
-    quote: "As a small homegrown cake business, we always depended on word-of-mouth and personal contacts for orders. Stackforge Studio gave us our very first professional digital presence where customers could explore our cake designs, understand our offerings, and directly send inquiries. It made our business feel more organized, more visible, and much more trustworthy to new customers.",
+    quote: "As a small homegrown cake business, we always depended on word-of-mouth and personal contacts for orders. Noryant gave us our very first professional digital presence where customers could explore our cake designs, understand our offerings, and directly send inquiries. It made our business feel more organized, more visible, and much more trustworthy to new customers.",
     author: "Cake Business Client",
     role: "Small Business Owner",
     initials: "CB"
