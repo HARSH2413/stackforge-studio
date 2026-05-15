@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     console.log(`Budget:       ${data.budget || "N/A"}`);
     console.log(`Timeline:     ${data.timeline || "N/A"}`);
     console.log(`Name:         ${data.name || "N/A"}`);
-    console.log(`WhatsApp:     ${data.whatsapp || "N/A"}`);
+    console.log(`Phone:        ${data.whatsapp || "N/A"}`);
     console.log(`Email:        ${data.email || "N/A"}`);
     console.log(`Callback:     ${data.callbackPreference || "N/A"}`);
     console.log(`Source Page:  ${data.conversationSource || "N/A"}`);
@@ -48,7 +48,7 @@ export async function POST(req: Request) {
 New Chatbot Inquiry Received
 
 Name: ${data.name || "N/A"}
-WhatsApp: ${data.whatsapp || "N/A"}
+Phone: ${data.whatsapp || "N/A"}
 Email: ${data.email || "N/A"}
 Service: ${data.service || "N/A"}
 Budget: ${data.budget || "N/A"}

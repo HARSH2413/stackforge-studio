@@ -43,7 +43,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm mb-6">
-              Noryant is a growing software development studio building affordable, scalable, and low-maintenance digital solutions for businesses ready to grow.
+              Noryant builds scalable software systems, AI tools, and operational platforms for modern businesses.
             </p>
           </div>
 
@@ -81,9 +81,9 @@ export default function Footer() {
             <ul className="space-y-4">
               {[
                 { label: "hello@noryant.com", href: "mailto:hello@noryant.com" },
-                { label: "WhatsApp", href: "https://wa.me/919999999999" },
+                // { label: "WhatsApp", href: "https://wa.me/919999999999" },
                 { label: "LinkedIn", href: "https://www.linkedin.com/company/noryant" },
-                { label: "GitHub", href: "https://github.com/noryant" },
+                // { label: "GitHub", href: "https://github.com/noryant" },
               ].map((c) => (
                 <li key={c.label}>
                   <a href={c.href} target="_blank" rel="noopener noreferrer"

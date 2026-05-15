@@ -115,7 +115,7 @@ export default function Chatbot() {
             if (!isTypingRef.current && currentStepRef.current !== "final_closing") {
               inactivityFired.current.add(2);
               addBotMessageText(
-                "No worries if you're busy! 👋\n\nYou can always come back later, or reach us directly:\n\n📧 hello@noryant.com\n📱 WhatsApp: wa.me/919999999999\n\nWe're here whenever you're ready."
+                "No worries if you're busy! 👋\n\nYou can always come back later, or reach us directly:\n\n📧 hello@noryant.com\n\nWe're here whenever you're ready."
               );
             }
           }, INACTIVITY_NUDGE_2);
@@ -364,13 +364,13 @@ export default function Chatbot() {
   const handleRedirect = (option: string) => {
     const lower = option.toLowerCase();
 
-    if (lower.includes("whatsapp") || lower.includes("💬")) {
+{/*     if (lower.includes("whatsapp") || lower.includes("💬")) {
       const waText = encodeURIComponent(
         `Hi Noryant! I'd like to discuss a project.\n\nName: ${leadData.name || "Not shared"}\nService: ${leadData.service || "General inquiry"}\nBudget: ${leadData.budget || "Not specified"}`
       );
       const waLink = `https://wa.me/919999999999?text=${waText}`;
       window.open(waLink, "_blank");
-    }
+    } */}
     // Callback & consultation are handled by step transitions
   };
 

@@ -204,7 +204,7 @@ export const getBotResponseForStep = (
 
     case "talk_to_human_whatsapp":
       return {
-        text: `Thanks${previousInput ? `, ${previousInput.trim().split(" ")[0]}` : ""}! 🙌\n\nWhat's the best WhatsApp number to reach you on?\n\n(Include country code, e.g., +91 98765 43210)`,
+        text: `Thanks${previousInput ? `, ${previousInput.trim().split(" ")[0]}` : ""}! 🙌\n\nWhat's the best phone number to reach you on?\n\n(Include country code, e.g., +91 98765 43210)`,
         inputType: "tel",
       };
 
@@ -223,7 +223,7 @@ export const getBotResponseForStep = (
 
     case "support_after_delivery":
       return {
-        text: "Great question! Here's our support commitment:\n\n✅ 6 months complimentary technical support\n✅ Bug fixes & critical patches included\n✅ Minor UI adjustments covered\n✅ Technical guidance via WhatsApp/email\n✅ Optional extended maintenance plans available\n\nYou're never left alone after launch.\n\nWant to discuss a new project with this support assurance?",
+        text: "Great question! Here's our support commitment:\n\n✅ 6 months complimentary technical support\n✅ Bug fixes & critical patches included\n✅ Minor UI adjustments covered\n✅ Technical guidance via phone/email\n✅ Optional extended maintenance plans available\n\nYou're never left alone after launch.\n\nWant to discuss a new project with this support assurance?",
         options: ["✅ Yes, Let's Discuss a Project", "❓ Ask More Questions"],
         inputType: "none",
       };
@@ -335,14 +335,14 @@ export const getBotResponseForStep = (
     case "contact_whatsapp": {
       const firstName = previousInput?.trim().split(" ")[0] || "";
       return {
-        text: `Nice to meet you${firstName ? `, ${firstName}` : ""}! 😊\n\nWhat's the best WhatsApp number to reach you?\n\n(Include country code, e.g., +91 98765 43210)`,
+        text: `Nice to meet you${firstName ? `, ${firstName}` : ""}! 😊\n\nWhat's the best phone number to reach you?\n\n(Include country code, e.g., +91 98765 43210)`,
         inputType: "tel",
       };
     }
 
     case "contact_email":
       return {
-        text: "Almost done! 📧\n\nWhat's your email address?\n\n(Type 'skip' if you'd prefer WhatsApp-only communication)",
+        text: "Almost done! 📧\n\nWhat's your email address?\n\n(Type 'skip' if you'd prefer phone-only communication)",
         inputType: "text",
       };
 
@@ -373,7 +373,7 @@ export const getBotResponseForStep = (
       return {
         text: `${timelineAck}How would you like to continue the conversation?`,
         options: [
-          "💬 Chat on WhatsApp",
+          "💬 Request a Text",
           "📞 Request a Callback",
           "🗓️ Schedule Free Consultation",
           "❓ Continue Asking Questions",
@@ -397,8 +397,8 @@ export const getBotResponseForStep = (
       let closingMessage = "Thank you for chatting with Noryant! 🙌\n\nHere's what happens next:\n\n";
 
       // Personalized closing based on conversation context
-      if (input.includes("whatsapp") || input.includes("💬")) {
-        closingMessage += "✅ We've opened WhatsApp for you — our team will respond shortly\n";
+      if (input.includes("text") || input.includes("💬")) {
+        closingMessage += "✅ We'll send you a text shortly\n";
       } else if (input.includes("callback") || input.includes("call") || input.includes("📞")) {
         closingMessage += "✅ Callback request received — we'll call you at your preferred time\n";
       } else if (input.includes("consultation") || input.includes("schedule") || input.includes("🗓")) {

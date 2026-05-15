@@ -65,18 +65,14 @@ export default function Navbar() {
 
           {/* Logo — Anti-Gravity */}
           <a href="/" className="flex items-center gap-3 group py-1">
-            <div className="relative animate-levitate">
-              <div className="h-10 w-10 rounded-xl logo-glass shadow-sm group-hover:shadow-lg transition-all duration-300 overflow-hidden flex items-center justify-center">
-                <Image
-                  src="/images/noryant-logo.png"
-                  alt="Noryant"
-                  width={200}
-                  height={200}
-                  className="h-[85%] w-[85%] object-contain logo-glow"
-                  priority
-                />
-              </div>
-            </div>
+            <Image
+              src="/images/noryant-logo-trim.png"
+              alt="Noryant"
+              width={183}
+              height={205}
+              className="block h-[42px] w-[42px] shrink-0 object-contain animate-levitate logo-glow"
+              priority
+            />
             <span className="text-[13px] font-bold tracking-[0.28em] text-slate-800 font-[var(--font-brand)] uppercase group-hover:text-sky-600 transition-colors duration-300 select-none">
               NORYANT
             </span>

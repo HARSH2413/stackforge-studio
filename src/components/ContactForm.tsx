@@ -58,12 +58,12 @@ export default function ContactForm() {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-5">
-          <div>
+{/*           <div>
             <label className="block text-sm font-bold text-slate-900 mb-2">WhatsApp Number</label>
             <input type="tel" required placeholder="+91 99999 99999" value={formData.whatsapp}
               onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
               className={inputClasses} />
-          </div>
+          </div> */}
           <div>
             <label className="block text-sm font-bold text-slate-900 mb-2">Service Needed</label>
             <select value={formData.service} onChange={(e) => setFormData({ ...formData, service: e.target.value })}

@@ -71,7 +71,7 @@ export default function Contact() {
             <div className="space-y-4">
               {[
                 { icon: Mail, label: "Email Us", value: "hello@noryant.com", href: "mailto:hello@noryant.com" },
-                { icon: Phone, label: "WhatsApp", value: "Connect on WhatsApp", href: "https://wa.me/919999999999" },
+                // { icon: Phone, label: "WhatsApp", value: "Connect on WhatsApp", href: "https://wa.me/919999999999" },
                 { icon: Linkedin, label: "LinkedIn", value: "Noryant", href: "https://www.linkedin.com/company/noryant" },
               ].map((contact) => {
                 const Icon = contact.icon;
@@ -128,7 +128,7 @@ export default function Contact() {
                   />
                 </div>
 
-                <div>
+{/*                 <div>
                   <label className="block text-sm font-semibold text-slate-900 mb-2">WhatsApp Number</label>
                   <input
                     type="tel"
@@ -138,7 +138,7 @@ export default function Contact() {
                     onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all placeholder:text-slate-400"
                   />
-                </div>
+                </div> */}
 
                 <div>
                   <label className="block text-sm font-semibold text-slate-900 mb-2">Project Requirements</label>
